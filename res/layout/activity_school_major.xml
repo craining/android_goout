@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 院校-专业 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_schoolmajor_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_schoolmajor_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_schoolmajor_back"
+            android:layout_width="45dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:clickable="true"
+            android:src="@drawable/btn_title_back_selector" />
+
+        <TextView
+            android:id="@+id/text_schoolmajor_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/school_main_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_schoolmajor_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_title_selector"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:text="@string/projectinfo_title_btn_fav"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!--
+         android:paddingBottom="10dip"
+        android:paddingLeft="1dip"
+        android:paddingRight="3dip"
+        android:paddingTop="0.5dip"
+    -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_schoolmajor_title"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/bg_border_shadow"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 正在加载中。。。。 -->
+
+            <LinearLayout
+                android:id="@+id/layout_schoolmajor_loadinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_schoolmajor_loadinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/schoolmajor_loading"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+<!--   -->
+
+                <Button
+                    android:id="@+id/btn_schoolmajor_reload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/btn_title_selector"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="5dip"
+                    android:text="@string/load_retry"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- android:background="@drawable/bg_roundcorner_top" -->
+            <LinearLayout
+                android:id="@+id/layout_schoolmajor_body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

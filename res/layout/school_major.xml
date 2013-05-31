@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 院校专业中，可展开的专业条目 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_schoolmajor_item"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_schoolmajor_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="1dip"
+        android:background="@color/bg_main"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/text_schoolmajor_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="@string/type_highschool"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_schoolmajor_updown"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="3dip"
+            android:padding="8dip"
+            android:src="@drawable/ic_arrow_down" />
+    </RelativeLayout>
+
+    <!--  -->
+
+    <LinearLayout
+        android:id="@+id/layout_schoolmajor_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/grey_line_major" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/white" />
+
+        <!--
+                android:paddingBottom="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="5dip"
+        -->
+
+        <LinearLayout
+            android:id="@+id/layout_schoolmajor_info_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+        </LinearLayout>
+        <!--
+        <TextView
+            android:id="@+id/text_schoolmajor_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"/>
+        -->
+    </LinearLayout>
+    <!-- 此处分隔线是上灰下白的 -->
+
+    <View
+        android:id="@+id/view_schoolmajor_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/bg_line_grey_lightgrey" />
+
+</LinearLayout>

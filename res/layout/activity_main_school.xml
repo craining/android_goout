@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 院校 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main_school_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_school_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <!-- 宽度如何控制？ -->
+
+        <RelativeLayout
+            android:id="@+id/layout_school_flitercountry"
+            android:layout_width="70dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/btn_title_selector" >
+
+            <ImageView
+                android:id="@+id/img_school_flitercountry_arrow"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@drawable/btn_title_arrow_down" />
+
+            <TextView
+                android:id="@+id/text_school_flitercountry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_toLeftOf="@id/img_school_flitercountry_arrow"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/filter_country"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_school_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:singleLine="true"
+            android:text="@string/main_school"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_school_major"
+            android:layout_width="70dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_title_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip"
+            android:singleLine="true"
+            android:text="@string/filter_major"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <!--
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+        -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_school_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_school_title"
+        android:background="@color/bg_main"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_school_listbody"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 排序方式选项卡 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/text_school_sortrank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_sort_unselected"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/sort_rank"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_school_sortletter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_sort_unselected"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="@string/sort_letter"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- 按名次排序时的布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_school_sort_rank"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+
+                <ListView
+                    android:id="@+id/listview_school_sort_rank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:dividerHeight="@dimen/diver_height_list"
+                    android:fadingEdge="none"
+                    android:listSelector="@drawable/bg_item_p" />
+            </LinearLayout>
+
+            <!-- 按首字母排序时的布局 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_school_sort_letter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_main" >
+
+                <com.c35.ptc.goout.view.LetterListView
+                    android:id="@+id/letterview_school_sort_letter"
+                    android:layout_width="25dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/bg_letterlist" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="25dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_school_sort_letter_titile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_sort_letter"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="10dip"
+                        android:textSize="14sp" />
+
+                    <ListView
+                        android:id="@+id/listview_school_sort_letter"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_main"
+                        android:dividerHeight="@dimen/diver_height_list"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@drawable/bg_line_grey_lightgrey"
+                        android:fadingEdge="none"
+                        android:listSelector="@drawable/bg_item_selector"
+                        android:scrollbars="none" />
+                </LinearLayout>
+
+                <!--
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/text_school_sort_letter_titile"
+                    android:layout_toLeftOf="@id/letterview_school_sort_letter"
+                </RelativeLayout>
+                -->
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 正在获取院校列表... -->
+
+        <LinearLayout
+            android:id="@+id/layout_schoollist_loadinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_main"
+            android:orientation="vertical"
+            android:paddingTop="50dip" >
+
+            <TextView
+                android:id="@+id/text_schoollist_loadinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dip"
+                android:gravity="center"
+                android:text="@string/schoollist_loading"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_schoollist_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/btn_title_selector"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="5dip"
+                android:text="@string/load_retry"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

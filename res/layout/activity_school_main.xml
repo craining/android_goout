@@ -1,0 +1,132 @@
+<!--  院校ActivityGroup -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 动态显示不同界面 -->
+
+    <LinearLayout
+        android:id="@+id/tab_layout_school_mainbody"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!-- 底部功能菜单栏:简介、专业、项目推荐、照片 -->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tab_layout_school_bottombody"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="11"
+        android:background="@drawable/tabschool_bg"
+        android:orientation="horizontal" >
+
+        <!-- 院校简介 -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tab_school_info"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_school_intro"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="4dip"
+                android:src="@drawable/tabschool_ico_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_main_intro"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- 专业 -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tab_school_major"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_school_major"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/tabschool_ico_major" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_main_major"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+		<!-- 项目推荐 -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tab_school_project"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_school_project"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="4dip"
+                android:src="@drawable/tabschool_ico_project" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_main_project"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+		<!-- 照片 -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tab_school_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_tab_school_pic"
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="4dip"
+                android:src="@drawable/tabschool_pic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_main_pic"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

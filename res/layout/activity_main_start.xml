@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 首页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main_start_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_startpage_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <!-- 宽度如何控制？ -->
+
+        <RelativeLayout
+            android:id="@+id/layout_startpage_flitercountry"
+            android:layout_width="70dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/btn_title_selector" >
+
+            <ImageView
+                android:id="@+id/img_startpage_flitercountry_arrow"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:src="@drawable/btn_title_arrow_down" />
+
+            <TextView
+                android:id="@+id/text_start_filtercountry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginLeft="3dip"
+                android:layout_toLeftOf="@id/img_startpage_flitercountry_arrow"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="@string/filter_country"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_startpage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/main_start"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_startpage_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_startpage_title"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_type_tab_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="72dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/type_bg" />
+
+        <!-- 防止其遮挡突出的箭头，故提到layout_type_tab前 -->
+
+        <ListView
+            android:id="@+id/listview_main_start"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_type_tab_bg"
+            android:background="@color/bg_main"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/bg_line_grey_lightgrey"
+            android:dividerHeight="@dimen/diver_height_list"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/bg_item_selector"
+            android:visibility="gone" />
+
+        <!-- 学位过滤 , 透明背景，防止箭头 -->
+
+        <LinearLayout
+            android:id="@+id/layout_type_tab"
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+
+            <!-- 高中 -->
+
+            <LinearLayout
+                android:id="@+id/layout_main_start_filter_highschool"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="10dip"
+                    android:contentDescription="@string/type_highschool"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/type_ico_highshcool" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/type_highschool"
+                    android:textColor="@color/grey_projectlisttext" />
+            </LinearLayout>
+            <!-- 本科 -->
+
+            <LinearLayout
+                android:id="@+id/layout_main_start_filter_bachelor"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="10dip"
+                    android:contentDescription="@string/type_bachelor"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/type_ico_bachelor" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/type_bachelor"
+                    android:textColor="@color/grey_projectlisttext" />
+            </LinearLayout>
+            <!-- 硕士 -->
+
+            <LinearLayout
+                android:id="@+id/layout_main_start_filter_master"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="10dip"
+                    android:contentDescription="@string/type_master"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/type_ico_master" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/type_master"
+                    android:textColor="@color/grey_projectlisttext" />
+            </LinearLayout>
+            <!-- 博士 -->
+
+            <LinearLayout
+                android:id="@+id/layout_main_start_filter_doctor"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="10dip"
+                    android:contentDescription="@string/type_doctor"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/type_ico_doctor" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/type_doctor"
+                    android:textColor="@color/grey_projectlisttext" />
+            </LinearLayout>
+            <!-- 预科 -->
+
+            <LinearLayout
+                android:id="@+id/layout_main_start_filter_preparatory"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dip" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginTop="10dip"
+                    android:contentDescription="@string/type_preparatory"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/type_ico_preparatory" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dip"
+                    android:gravity="center_horizontal"
+                    android:text="@string/type_preparatory"
+                    android:textColor="@color/grey_projectlisttext" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--
+             热门推荐条 <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" 
+			android:gravity="left" android:paddingBottom="3dip" android:paddingLeft="10dip" 
+			android:paddingTop="3dip" android:text="@string/title_second_recomend" />
+        -->
+
+<!-- 加载提示信息 -->
+        <LinearLayout
+            android:id="@+id/layout_projectlist_load"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/layout_type_tab"
+            android:orientation="vertical"
+            android:paddingTop="50dip" >
+
+            <TextView
+                android:id="@+id/text_projcectlist_load"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/projectlist_loading"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_projectlist_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/load_retry"
+                android:background="@drawable/btn_title_selector"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

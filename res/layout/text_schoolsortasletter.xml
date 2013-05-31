@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 院校列表，按字母排序，滑动字母表时的弹窗布局 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dip"
+    android:layout_height="100dip"
+    android:gravity="center"
+    android:padding="10dip"
+    android:textColor="#3399ff"
+    android:background="@drawable/bg_sort_letter_float"
+    android:textSize="30sp" />

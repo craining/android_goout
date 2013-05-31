@@ -1,0 +1,97 @@
+<!-- 专业选择页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_select_major_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_select_major_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_select_major_back"
+            android:layout_width="45dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/btn_title_back_selector"
+            android:clickable="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"/>
+
+        <TextView
+            android:id="@+id/text_select_major_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/title_select_major"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_select_major_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_select_major_title"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listview_select_major"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="@dimen/diver_height_selectlist"
+            android:fadingEdge="none" 
+            android:visibility="gone"/>
+        
+           <!-- 专业列表加载中 -->
+        
+           <LinearLayout
+            android:id="@+id/layout_select_major_loadinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingTop="50dip" >
+
+            <TextView
+                android:id="@+id/text_select_major_loadinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/select_major_loading"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+ 
+            <Button
+                android:id="@+id/btn_select_major_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_title_selector"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/load_retry"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+        
+           
+        
+    </LinearLayout>
+
+</RelativeLayout>

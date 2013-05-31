@@ -1,0 +1,243 @@
+<resources>
+
+    <string name="app_name">能留学</string>
+    <string name="loadnonetwork">请检查网络连接！</string>
+    <string name="loadnonetwork_toast">当前无网络，请稍后再试！</string>
+    <string name="load_retry">重试</string>
+    <string name="doopera_fail">操作失败！</string>
+    <string name="doopera_success">操作成功！</string>
+    <string name="load_slow_tip">(正在从服务器获取数据，请耐心等待)</string>
+    <string name="alert_str">提示</string>
+    <string name="ok_str">确定</string>
+    <string name="cancel_str">取消</string>
+    <string name="unknow">未知</string>
+    <string name="sdcard_notexist">存储卡不存在！</string>
+    <string name="catch_notexist">没有缓存文件！</string>
+    <string name="catch_clearing">正在清除，请等待&#8230;</string>
+    <string name="catch_clear_success">缓存文件清除完成！</string>
+    <string name="check_update_wait">正在检测新版本，请等待&#8230;</string>
+    <string name="sycn_start">开始同步</string>
+    <string name="sycn_ing">正在同步</string>
+    <string name="sycn_fail">同步失败</string>
+    <string name="sycn_fail_notlogin">同步失败:未登录</string>
+    <string name="sycn_sucess">同步成功</string>
+    <string name="favorite_refresh">刷新</string>
+
+    <!-- MainActivity -->
+    <string name="label_activity_main">首页</string>
+    <string name="main_start">首页</string>
+    <string name="main_school">院校</string>
+    <string name="main_personal">我的</string>
+    <string name="filter_country">美国</string>
+
+    <!-- MainStartActivity -->
+    <string name="label_activity_start">项目列表页</string>
+    <string name="type_highschool">高中</string>
+    <string name="type_bachelor">本科</string>
+    <string name="type_master">硕士</string>
+    <string name="type_doctor">博士</string>
+    <string name="type_preparatory">预科</string>
+    <string name="title_second_recomend">热门推荐</string>
+    <string name="projectlist_null">尚无任何项目。</string>
+    <string name="projectlist_loading">正在加载项目列表&#8230;</string>
+    <string name="projectlist_loadfail">项目列表加载失败！</string>
+
+    <!-- ProjectInfoActovity -->
+    <string name="label_activity_projectinfo">项目详情页</string>
+    <string name="projectinfo_title_btn_fav">收藏</string>
+    <string name="projectinfo_title_btn_unfav">取消收藏</string>
+    <string name="projectinfo_null">获取项目信息失败，请重试！</string>
+    <string name="projectinfo_title">项目详情</string>
+    <string name="projectinfo_country">国家：</string>
+    <string name="projectinfo_fcost">费用：</string>
+    <string name="projectinfo_servicecharge">服务费：</string>
+    <string name="projectinfo_entertime">入学时间：</string>
+    <string name="projectinfo_gpa">GPA：</string>
+    <string name="projectinfo_languagerequest">语言要求：</string>
+    <string name="projectinfo_language">语言：</string>
+    <string name="projectinfo_school">学校：</string>
+    <string name="projectinfo_info">简介：</string>
+    <string name="projectinfo_info_null">暂无</string>
+    <string name="consultant_tel">联系电话：</string>
+    <string name="consultant_call_time">联系时间：</string>
+    <string name="consultant_serverarea">服务区域：</string>
+    <string name="consultant_callhim">咨询顾问</string>
+    <string name="projectinfo_loading">正在加载项目详情&#8230;</string>
+    <string name="projectinfo_loadfail">项目详情加载失败！</string>
+    <string name="projectinfo_publisher_null">发布者信息获取失败！</string>
+
+    <!-- ConsultantInfoActivity -->
+    <string name="label_activity_consultantinfo">顾问信息页</string>
+    <string name="consultantinfo_title_adviser">顾问信息</string>
+    <string name="consultantinfo_title_intermediary">中介信息</string>
+    <string name="consultantinfo_counts_head">已发布</string>
+    <string name="consultantinfo_counts_tail">条留学项目</string>
+    <string name="consultantinfo_counts_null">查看已发布的留学项目</string>
+
+    <!--  -->
+    <string name="label_activity_publisherproject">顾问项目列表页</string>
+    <string name="publisherproject_title">已发布的项目</string>
+    <!-- MainSchoolActivity -->
+    <string name="label_activity_school">院校页</string>
+    <string name="filter_major">选专业</string>
+    <string name="sort_rank">排名</string>
+    <string name="sort_letter">首字母</string>
+    <string name="schoollist_loading">正在加载院校列表&#8230;</string>
+    <string name="schoollist_null">院校列表为空！</string>
+    <string name="schoollist_fail">院校列表加载失败！</string>
+
+    <!-- SelectCountryActivity -->
+    <string name="label_activity_select_country">国家选择页</string>
+    <string name="title_select_country">国家选择</string>
+    <string name="select_country_loading">国家列表正在加载中&#8230;</string>
+    <string name="select_country_loadfail">国家列表加载失败！</string>
+    <string name="select_country_loadnull">国家列表为空！</string>
+
+    <!-- SelectMajorActivity -->
+    <string name="label_activity_select_major">专业选择页</string>
+    <string name="title_select_major">专业选择</string>
+    <string name="select_major_all">所有专业</string>
+    <string name="select_major_loading">专业列表正在加载中&#8230;</string>
+    <string name="select_major_loadfail">专业列表加载失败！</string>
+    <string name="select_major_loadnull">专业列表为空！</string>
+
+    <!-- SchoolMainActivity -->
+    <string name="label_activity_schoolmain">院校主页</string>
+    <string name="school_main_title">院校详情</string>
+    <string name="school_main_intro">简介</string>
+    <string name="school_main_major">专业</string>
+    <string name="school_main_project">项目推荐</string>
+    <string name="school_main_pic">照片</string>
+
+    <!-- SchoolIntroActivity -->
+    <string name="label_activity_schoolintro">院校简介</string>
+    <string name="schoolintro_educationrequire">学历要求：</string>
+    <string name="schoolintro_gpa">GPA：</string>
+    <string name="schoolintrlanguage">语言要求：</string>
+    <string name="schoolintro_endtime">申请截止日期：</string>
+    <string name="schoolintro_tuition">学费：</string>
+    <string name="schoolintro_scholarship">奖学金：</string>
+    <string name="schoolintro_scholarship_have">有</string>
+    <string name="schoolintro_scholarship_none">无</string>
+    <string name="schoolinfo_loading">正在加载院校简介&#8230;</string>
+    <string name="schoolinfo_loadfail">院校简介加载失败！</string>
+    <string name="schoolinfo_degree_null">暂无学位信息！</string>
+    <string name="schoolinfo_degree_fail">学位信息获取失败！</string>
+
+    <!-- SchoolMajorActivity -->
+    <string name="label_activity_schoolmajor">院校专业</string>
+    <string name="schoolmajor_loading">正在加载院校专业&#8230;</string>
+    <string name="schoolmajor_loadfail">院校专业加载失败！</string>
+    <string name="schoolmajor_loadnull">暂无专业数据！</string>
+    <!-- SchoolProjectActivity -->
+    <string name="label_activity_schoolproject">院校项目</string>
+
+    <!-- SchoolPicActivity -->
+    <string name="label_activity_schoolpic">院校照片</string>
+    <string name="schoolpic_loading">正在载入图片&#8230;</string>
+    <string name="schoolpic_null">暂无院校展示图片！</string>
+
+    <!-- MainPersonalActivity -->
+    <string name="label_activity_personal">用户信息页</string>
+    <string name="item_favourite_school">院校收藏</string>
+    <string name="item_favourite_project">项目收藏</string>
+    <string name="item_recentlycommunicate_title">最近联系</string>
+    <string name="item_checkupdate_title">检测新版本</string>
+    <string name="item_clear">清除缓存</string>
+    <string name="item_clear_dlgtext">您确定清除存储卡上的缓存文件吗？</string>
+
+    <!-- FavouriteProjectActivity -->
+    <string name="label_activity_fav_project">项目收藏页</string>
+    <string name="favproject_null">尚未收藏任何项目！</string>
+    <!-- FavouriteSchoolActivity -->
+    <string name="label_activity_fav_school">院校收藏页</string>
+    <string name="favschool_null">尚未收藏任何院校！</string>
+
+    <!-- PersonalRecentlyCommunicateAtivity -->
+    <string name="label_activity_recently">最近联系页</string>
+    <string name="communicate_null">尚未联系过任何人！</string>
+
+    <!-- AccountRegisterActivity -->
+    <string name="label_activity_register">账户注册页</string>
+    <string name="register_title">注册</string>
+    <string name="register_login">登录</string>
+    <string name="register_mobile">绑定手机</string>
+    <string name="register_getcode">获取验证码</string>
+    <string name="register_other">其它注册方式</string>
+    <string name="register_recendcode">重发验证码</string>
+    <string name="register_inputcode_hint">请输入短信中的验证码</string>
+    <string name="register_inputcode_null">请输入验证码！</string>
+    <string name="register_inputcode_error">验证码错误！</string>
+    <string name="register_inputnumber_hint">请输入您的手机号</string>
+    <string name="register_number_error">请输入正确的号码</string>
+    <string name="register_pwd_hint">设置密码(6至12位)</string>
+    <string name="register_pwd_error">密码须6至12位</string>
+    <string name="register_request_code_fail">请求验证码失败！</string>
+    <string name="register_pwd_null">密码不能为空！</string>
+    <string name="register_success">注册成功！</string>
+    <string name="register_fail">注册失败！</string>
+    <string name="register_wait_hint">正在注册，请等待&#8230;</string>
+    <string name="register_same_mobile">手机号已经被注册绑定！</string>
+    <string name="register_code_error"> 验证码错误！</string>
+    <string name="register_same_third"> 第三方账号已经被注册！</string>
+    <string name="register_wait_code_hint">正在验证，请等待&#8230;</string>
+    <string name="register_error_unknow">未知错误！</string>
+
+    <!-- PersonalCheckUpdateActivity -->
+    <string name="label_activity_checkupdate">版本检测页</string>
+
+    <!-- AccountManagerActivity -->
+    <string name="label_activity_accountmanager">账户管理页</string>
+    <string name="account">账号：</string>
+    <string name="account_login">登录</string>
+    <string name="account_logout">退出登录</string>
+    <string name="account_mobile">绑定手机：</string>
+    <string name="account_ohters">绑定账号</string>
+    <string name="account_renren">人人网：</string>
+    <string name="account_qqweibo">腾讯微博：</string>
+    <string name="account_sinaweibo">新浪微博：</string>
+    <string name="account_renren2">人人网</string>
+    <string name="account_qqweibo2">腾讯微博</string>
+    <string name="account_sinaweibo2">新浪微博</string>
+    <string name="item_myaccount">我的账号</string>
+    <string name="item_account_null">未登录</string>
+    <string name="item_account_notadd">未绑定</string>
+    <string name="item_account_add">绑定</string>
+    <string name="item_account_remove">已绑定</string>
+    <string name="bind_success">绑定成功！</string>
+    <string name="bind_fail">绑定失败！</string>
+    <string name="unbind_fail">解绑失败！</string>
+    <string name="unbind_success">解绑成功！</string>
+    <string name="exit_success">账户退出成功！</string>
+    <string name="exit_fail">账户退出失败！</string>
+    <string name="exit_ing">正在退出，请等待&#8230;</string>
+
+    <!-- AccountLoginActivity -->
+    <string name="label_activity_accountlogin">账号登录页</string>
+    <string name="login">登录</string>
+    <string name="exit">退出</string>
+    <string name="login_pwd_hint">密码</string>
+    <string name="login_name_hint">手机号</string>
+    <string name="login_other">其它登录方式</string>
+    <string name="login_success">登录成功！</string>
+    <string name="login_fail">登录失败！</string>
+    <string name="login_null">手机号和密码不能为空！</string>
+    <string name="login_wait_hint">正在登录，请等待&#8230;</string>
+
+    <!-- ShareActivity -->
+    <string name="label_activity_share">分享页</string>
+    <string name="share_str">分享</string>
+    <string name="share_hint">请输入您的分享内容</string>
+    <string name="share_send">发送</string>
+    <string name="share_wait">正在发布，请等待&#8230;</string>
+    <string name="share_fail_top">以下第三方账号分享失败：</string>
+    <string name="share_success">分享成功！</string>
+    <string name="share_null">分享内容不能为空！</string>
+    <string name="share_content_head">我在【能留学】看到</string>
+    <string name="share_content_tail">"（点击查看：http://www.nengchuqu.com）"</string>
+    <string name="share_alert">尚未绑定此账号，是否进行绑定？</string>
+
+    <!-- ThirdAuthActivity -->
+    <string name="label_activity_thirdoath">第三方账号授权</string>
+
+</resources>

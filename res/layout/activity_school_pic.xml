@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 院校-照片 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_schoolpic_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_schoolpic_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_schoolpic_back"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:clickable="true"
+            android:src="@drawable/btn_title_back_selector" />
+
+        <TextView
+            android:id="@+id/text_schoolpic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/school_main_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_schoolpic_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_title_selector"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:text="@string/projectinfo_title_btn_fav"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <!--
+       防止小屏幕显示不开，加个滚动，（ps按weight比例显示没实现） 
+       <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_schoolpic_title"
+        android:layout_marginBottom="20dip"
+        android:fadingEdge="none" >
+    -->
+
+    <com.c35.ptc.goout.view.ScrollViewExtend
+        android:id="@+id/scroll_schoolpic"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_schoolpic_title"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:id="@+id/layout_schoolpic_body"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 学校图片+中英文名   与简介页对其 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_schoolpic_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_border"
+                android:paddingBottom="13dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip" >
+
+                <com.c35.ptc.goout.view.OnlineImageView
+                    android:id="@+id/onlineimg_schoolpic_ic"
+                    android:layout_width="45dip"
+                    android:layout_height="45dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/onlineimg_schoolpic_ic"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dip" >
+
+                    <TextView
+                        android:id="@+id/text_schoolpic_namecn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_schoolpic_nameen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/dimgrey"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_schoolpic_images_body"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <!-- 加入没有图片时的提示信息 -->
+
+                <TextView
+                    android:id="@+id/text_schoolpic_loading"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="50dip"
+                    android:background="@color/bg_main"
+                    android:gravity="center"
+                    android:text="@string/schoolpic_loading"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.c35.ptc.goout.view.PictureClickView
+                    android:id="@+id/picclickview_schoolpic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.c35.ptc.goout.view.ScrollViewExtend>
+
+</RelativeLayout>

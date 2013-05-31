@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 背景色 -->
+    <gradient
+        android:angle="0"
+        android:endColor="@color/item_clicked"
+        android:startColor="@color/item_clicked" />
+
+</shape>
+<!-- 我的页中间item，无需圆角 -->

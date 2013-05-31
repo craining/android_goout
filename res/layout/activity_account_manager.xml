@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 我的账户 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_accountmanager_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_accountmanager_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_accountmanager_back"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:clickable="true"
+            android:src="@drawable/btn_title_back_selector" />
+
+        <TextView
+            android:id="@+id/text_accountmanager_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/item_myaccount"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_accountmanager_accounts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/bg_border"
+        android:orientation="vertical" >
+
+        <!-- 账号 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_accountmanager_account"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="1dip" >
+
+            <TextView
+                android:id="@+id/text_accountmanager_accounttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="@string/account"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_accountname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@id/text_accountmanager_accounttitle"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_accountmanager_otherstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/account_ohters"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+    <!-- 第三方账号 -->
+
+    <LinearLayout
+        android:id="@+id/layout_accountmanager_third_accounts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/bg_border"
+        android:orientation="vertical" >
+
+        <!-- 绑定手机 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_accountmanager_mobile"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:clickable="false"
+            android:textColor="@color/black" >
+
+            <TextView
+                android:id="@+id/text_accountmanager_mobilename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="@string/account_mobile"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_mobilenum"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="85dip"
+                android:layout_toRightOf="@id/text_accountmanager_mobilename"
+                android:singleLine="true"
+                android:text="@string/item_account_notadd"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_accountmanager_mobileadd"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/btn_bind_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_accountmanager_mobileadd"
+                    android:layout_width="10dip"
+                    android:layout_height="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/ic_bind" />
+
+                <TextView
+                    android:id="@+id/text_accountmanager_mobileadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/item_account_add" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey" />
+
+        <!-- 新浪微博 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_accountmanager_sinaweibo"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="1dip"
+            android:background="@drawable/bg_item_top_selector"
+            android:clickable="false" >
+
+            <ImageView
+                android:id="@+id/img_sinaweibo"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:src="@drawable/logo_sinaweibo" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_sinaweibo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_sinaweibo"
+                android:text="@string/account_sinaweibo"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_sinaweibo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="75dip"
+                android:layout_toRightOf="@+id/text_accountmanager_sinaweibo_title"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_accountmanager_sinaadd"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/btn_bind_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_accountmanager_sinaadd"
+                    android:layout_width="10dip"
+                    android:layout_height="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/ic_bind" />
+
+                <TextView
+                    android:id="@+id/text_accountmanager_sinaadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/item_account_add" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 腾讯微博 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:id="@+id/layout_accountmanager_qqweibo"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:background="@drawable/bg_item_middle_selector"
+            android:clickable="false" >
+
+            <ImageView
+                android:id="@+id/img_accountmanager_qqweibo_ic"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:src="@drawable/logo_qqweibo" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_qqweibo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_accountmanager_qqweibo_ic"
+                android:text="@string/account_qqweibo"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_qqweibo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="75dip"
+                android:layout_toRightOf="@+id/text_accountmanager_qqweibo_title"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_accountmanager_qqweiboadd"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/btn_bind_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_accountmanager_qqweiboadd"
+                    android:layout_width="10dip"
+                    android:layout_height="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/ic_bind" />
+
+                <TextView
+                    android:id="@+id/text_accountmanager_qqweiboadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/item_account_add" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 人人 -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:id="@+id/layout_accountmanager_renren"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:background="@drawable/bg_item_bottom_selector"
+            android:clickable="false" >
+
+            <ImageView
+                android:id="@+id/img_accountmanager_renren_ic"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:src="@drawable/logo_renren" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_renren_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/img_accountmanager_renren_ic"
+                android:text="@string/account_renren"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_accountmanager_renren_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="75dip"
+                android:layout_toRightOf="@+id/text_accountmanager_renren_title"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_accountmanager_renrenadd"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/btn_bind_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_accountmanager_renrenadd"
+                    android:layout_width="10dip"
+                    android:layout_height="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/ic_bind" />
+
+                <TextView
+                    android:id="@+id/text_accountmanager_renrenadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dip"
+                    android:text="@string/item_account_add" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 登录或退出登录 -->
+
+    <Button
+        android:id="@+id/btn_accountmanager_loginout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="@string/account_login"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

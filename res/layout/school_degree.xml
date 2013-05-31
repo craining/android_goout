@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 院校简介中可展开的学位信息 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view_schooldegree_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/grey_line_two" />
+
+    <RelativeLayout
+        android:id="@+id/layout_schooldegree_title"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:layout_height="40dip" >
+
+        <TextView
+            android:id="@+id/text_schooldegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="@string/type_highschool"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_schooldegree_updown"
+            android:layout_width="28dip"
+            android:layout_height="28dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="2dip"
+            android:padding="8dip"
+            android:src="@drawable/ic_arrow_down" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_schooldegree_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/bg_line_thin" />
+        <!-- 学历要求 -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_education"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+        <!-- GPA -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_gpa"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+        <!-- 语言要求 -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_language"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+        <!-- 申请截止日期 -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_endtime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+        <!-- 学费 -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_tuition"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+        <!-- 奖学金 -->
+
+        <TextView
+            android:id="@+id/text_schooldegree_scholarship"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+    </LinearLayout>
+
+</LinearLayout>

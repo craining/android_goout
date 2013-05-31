@@ -1,0 +1,80 @@
+<!-- 最近联系列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_recently_communicate_main"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_recently_communicate_title"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_recently_communicate_back"
+            android:layout_width="45dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/btn_title_back_selector"
+            android:clickable="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip" />
+
+        <TextView
+            android:id="@+id/text_recently_communicate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="@string/item_recentlycommunicate_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_recently_communicate_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_recently_communicate_title"
+        android:orientation="vertical" >
+        
+          <ListView
+            android:id="@+id/listview_recently_communicate"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_main"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/bg_line_grey_lightgrey"
+            android:dividerHeight="@dimen/diver_height_list"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/bg_item_selector"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_recently_communicate_info"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="50dip" >
+
+            <TextView
+                android:id="@+id/text_recently_communicate_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/communicate_null"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+<!-- 最近联系页 -->

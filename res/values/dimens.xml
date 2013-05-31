@@ -1,0 +1,17 @@
+<resources>
+
+    <dimen name="TEXT_SIZE_BIG_TITLE">16sp</dimen>
+    <dimen name="TEXT_SIZE_BIG_CONTENT">14sp</dimen>
+    <dimen name="TEXT_SIZE_MIDDLE_TITLE">16sp</dimen>
+    <dimen name="TEXT_SIZE_MIDDLE_CONTENT">14sp</dimen>
+    <dimen name="TEXT_SIZE_SMALL_TITLE">14sp</dimen>
+    <dimen name="TEXT_SIZE_SMALL_CONTENT">14sp</dimen>
+    <dimen name="TEXT_SIZE_MAJOR_CN">14sp</dimen>
+    <dimen name="TEXT_SIZE_MAJOR_EN">11sp</dimen>
+
+    <!-- 列表的分隔线 -->
+    <dimen name="diver_height_list">2sp</dimen>
+    <!-- 选择国家或专业列表的分隔线 -->
+    <dimen name="diver_height_selectlist">1sp</dimen>
+
+</resources>

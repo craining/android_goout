@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 院校照片展示控件布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_main"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_imageonline_show_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_main"
+        android:orientation="vertical" >
+
+        <com.c35.ptc.goout.view.OnlineImageView
+            android:id="@+id/imgonline_clickshow_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_shadow"
+            android:paddingBottom="16dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:scaleType="fitXY" />
+
+        <!--
+           android:paddingBottom="18dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="15dip"
+        -->
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_clickshow_itemimages"
+            android:layout_width="fill_parent"
+            android:layout_height="70dip"
+            android:layout_marginTop="2dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:background="@drawable/bg_border_shadow"
+            android:fadingEdge="horizontal"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/viewgroup_clickshow_itemimages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <!-- 中间的四个扣 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_clickshow_knot"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="25dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_knot" />
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="20dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_knot" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="20dip"
+                android:layout_marginRight="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_knot" />
+
+            <ImageView
+                android:layout_width="8dip"
+                android:layout_height="20dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_knot" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
+    <color name="light_grey">#D3D3D3</color>
+    <color name="orange_red">#FF4500</color>
+    <color name="grey">#BEBEBE</color>
+    <color name="dimgrey">#696969</color>
+
+    <!-- 主页背景 -->
+    <color name="bg_main">#E8E8E8</color>
+    <!-- 院校选项卡，排序方式被选中时的背景块 -->
+    <color name="bg_sort_selected">#E8E8E8</color>
+    <!-- 院校选项卡，排序方式未被选中时的背景块 -->
+    <color name="bg_sort_unselected">#C6C9CE</color>
+    <!--
+    院校选项卡，按字母排序，当前显示字母的背景条
+    <color name="bg_sort_lettertitle">#D4D5D7</color>
+    -->
+
+
+    <!-- 项目列表灰色文字的颜色 -->
+    <color name="grey_projectlisttext">#959595</color>
+    <!-- 分隔线 （项目详情页） -->
+    <color name="grey_line">#CFCFCF</color>
+    <!-- 分隔线（院校简介页\项目详情页） -->
+    <color name="grey_line_two">#C5C5C5</color>
+    <!-- 顾问的名字颜色 -->
+    <color name="blue_name">#04428F</color>
+    <!-- 项目详情页，橙色文字 -->
+    <color name="orange_text">#FF5500</color>
+    <!-- 院校-专业页，学位条目的背景色 -->
+    <color name="bg_school_major">#F4F4F4</color>
+    <!-- 院校-专业页展开后分隔线 -->
+    <color name="grey_line_major">#CECAC9</color>
+
+    <!-- “我的”item按下颜色 -->
+    <color name="item_clicked">#D4EDFD</color>
+
+    <!-- 字母检索条的背景色   <color name="bg_letterlist">#F6F6F6</color> -->
+    <color name="bg_letterlist">#E8E8E8</color>
+    <!--
+     选择国家列表页，选择专业列表页，分组条的背景色 
+    
+     <color name="bg_list_sortitem">#ACADAF</color>
+    -->
+
+
+    <!-- 院校照片展示底部小图片被选中时边框的颜色 -->
+    <color name="bolder_smallpic">#2898E0</color>
+
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+
+    <!-- 院校专业，英文颜色 -->
+    <color name="school_major_en">#959595</color>
+    <!-- 院校专业，中文颜色 -->
+    <color name="school_major_cn">#151515</color>
+    <!-- 其它注册方式文字的颜色 -->
+    <color name="register_other_color">#98B7C9</color>
+    <!-- 被选中时的边框背景 -->
+    <color name="border_focused">#FFA500</color>
+
+</resources>
